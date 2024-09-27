@@ -1,8 +1,6 @@
 package com.example.hotel.response;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
@@ -17,7 +15,7 @@ public class RoomResponse {
     private BigDecimal roomPrice;
     private boolean isBooked;
     private String photo;
-    private List<BookedRoomResponse> bookings;
+    private List<BookingResponse> bookings;
 
 
     public RoomResponse(Long id, String roomType, BigDecimal roomPrice) {
@@ -26,7 +24,7 @@ public class RoomResponse {
         this.roomPrice = roomPrice;
     }
 
-    public RoomResponse(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, byte[] photoBytes, List<BookedRoomResponse> bookings) {
+    public RoomResponse(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, byte[] photoBytes, List<BookingResponse> bookings) {
         this.id = id;
         this.roomType = roomType;
         this.roomPrice = roomPrice;
